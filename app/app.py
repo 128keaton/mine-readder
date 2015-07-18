@@ -1,6 +1,10 @@
 from collections import OrderedDict
 import mcstatus, yaml, time, threading
 from bottle import route, run, template, static_file, error
+from flask import Flask, render_template
+from flask.ext.socketio import SocketIO
+import json
+
 
 data = {}
 json_response = None
@@ -88,6 +92,13 @@ schedule_update()
 schedule_json()
 
 try:
-    run(host='localhost', port=8080)
+    run(host='localhost', port=80)
 except KeyboardInterrupt:
     sys.exit(0)
+
+app = Flask(__name__)
+socketio = SocketIO(app)
+
+@app.route("../")
+def index():
+    return render_template('index.html',)

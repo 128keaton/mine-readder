@@ -98,7 +98,7 @@ else:
     portChosen = 3000
     
 try:
-    run(host='localhost', port=portChosen)
+    run(host='localhost', port=8080)
 except KeyboardInterrupt:
     sys.exit(0)
 

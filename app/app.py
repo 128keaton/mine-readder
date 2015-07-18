@@ -2,6 +2,8 @@ from collections import OrderedDict
 import mcstatus, yaml, time, threading
 from bottle import route, run, template, static_file, error
 
+import os
+ON_HEROKU = os.environ.get('ON_HEROKU')
 
 
 data = {}
@@ -89,8 +91,14 @@ def server_static(filename):
 schedule_update()
 schedule_json()
 
+if ON_HEROKU:
+    # get the heroku port
+    portChosen = int(os.environ.get('PORT', 8080))  # as per OP comments default is 17995
+else:
+    portChosen = 3000
+    
 try:
-    run(host='localhost', port=8080)
+    run(host='localhost', port=portChosen)
 except KeyboardInterrupt:
     sys.exit(0)
 

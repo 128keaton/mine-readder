@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"> 
+    <title>Status Test</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootswatch/latest/superhero/bootstrap.min.css" rel=
+    "stylesheet" type="text/css">
+    <link href="override.css" rel="stylesheet" type="text/css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+    <script src="populate.js" type="text/javascript"></script>
+    <!-- Running https://github.com/vemacs/mc-status-viewer -->
+</head>
+
+<body>
+    <div class="container row">
+        <div class="col-md-9">
+            <h2>Alive</h2>
+
+            <div class="row align-row" id="alive-data"></div>
+        </div>
+
+        <div class="col-md-3">
+            <h2>Dead</h2>Dead instances are instances which refused the
+            connection or timed out.
+
+            <div class="row align-row" id="dead-data"></div>
+        </div>
+    </div>
+</body>
+</html>

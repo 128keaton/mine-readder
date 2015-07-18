@@ -2,8 +2,12 @@ from collections import OrderedDict
 import mcstatus, yaml, time, threading
 from bottle import route, run, template, static_file, error
 
-import os
-ON_HEROKU = os.environ.get('ON_HEROKU')
+try:
+    import gevent.monkey
+    gevent.monkey.patch_all()
+except:
+    pass
+
 
 
 data = {}
@@ -91,15 +95,10 @@ def server_static(filename):
 schedule_update()
 schedule_json()
 
-if ON_HEROKU:
-    # get the heroku port
-    portChosen = int(os.environ.get('PORT', 8080))  # as per OP comments default is 17995
-else:
-    portChosen = 3000
-    
+
 try:
-  port = int(os.environ.get('PORT', 8080))
-  run(host='0.0.0.0', port=port)
+  
+  run(server='gevent', host='0.0.0.0', port=os.environ.get('PORT', 8080))
 except KeyboardInterrupt:
     sys.exit(0)
 

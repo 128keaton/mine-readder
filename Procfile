@@ -1,1 +1,1 @@
-status: python check.py
+status: cd app; python app.py

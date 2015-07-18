@@ -1,9 +1,7 @@
 from collections import OrderedDict
 import mcstatus, yaml, time, threading
 from bottle import route, run, template, static_file, error
-from flask import Flask, render_template
-from flask.ext.socketio import SocketIO
-import json
+
 
 
 data = {}
@@ -96,9 +94,5 @@ try:
 except KeyboardInterrupt:
     sys.exit(0)
 
-app = Flask(__name__)
-socketio = SocketIO(app)
 
-@app.route("../")
-def index():
-    return render_template('index.html',)
+

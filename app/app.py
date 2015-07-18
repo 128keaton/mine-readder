@@ -90,7 +90,7 @@ schedule_update()
 schedule_json()
 
 try:
-    run(host='localhost', port=80)
+    run(host='localhost', port=8080)
 except KeyboardInterrupt:
     sys.exit(0)
 

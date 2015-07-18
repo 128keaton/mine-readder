@@ -1,1 +1,1 @@
-status: python check.py
+status: cd mcstatus && python check.py

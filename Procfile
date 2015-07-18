@@ -1,1 +1,1 @@
-status: python mcstatus/check.py
+status: python check.py

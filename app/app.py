@@ -95,12 +95,7 @@ def server_static(filename):
 schedule_update()
 schedule_json()
 
-
-try:
-  
-  run(server='gevent', host='0.0.0.0', port=os.environ.get('PORT', 8080))
-except KeyboardInterrupt:
-    sys.exit(0)
+run(server='gevent', host='0.0.0.0', port=5000)
 
 
 

@@ -22,7 +22,7 @@ players = 0
 maxPlayers = 0
 username = 'BeardCraftMCBot'
 password = 'boxesz'
-subreddit =  'beardcraftmccss'       
+subreddit =  'beardcraftmc'       
 userAgent = 'Mine_Bot_S/v1.1.0 by 128keaton'
 sidebar = None
 

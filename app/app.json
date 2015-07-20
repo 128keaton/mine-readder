@@ -1,0 +1,7 @@
+{
+  "name": "Mine-Readder",
+  "description": "A neat lil pip app that updates your reddit sidebar",
+  "repository": "https://github.com/128keaton/mine-readder",
+  "logo": "https://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["readder", "mine", "static"]
+}

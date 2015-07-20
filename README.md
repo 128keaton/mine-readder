@@ -15,14 +15,4 @@
 
 Post feedback or suggestions here! Keep in mind that I'm a noob at Python and Javascript (I literally learned JS today), so any code quality feedback would be awesome.
 
-Here's the CPU/mem usage you'll be looking at (pinging way too many servers, running for an hour):
-
-![](http://i.imgur.com/scyRmnM.png)
-
-It's not 100% accurate due to the nature of server list ping, but it works well enough (99.99999% accurate). If you're having issues, ask your host if this is triggering their anti-DDoS mechanism. Delaying the pings does not seem to help in this situation, so your best bet may be to ask your host, or host it on a box that can ping. Updates are every 5 seconds on the server, and then 3 seconds to pull on the client. Obviously, you should allow the box you're putting this on through your backend firewall.
-
-Technically, you can host the frontend anywhere, just that origin policy complicates things.
-
-If Ctrl+C isn't stopping it, try Ctrl+Z. A restart needs to be issued for config changes to apply.
-
-**IF YOU ARE USING WINDOWS TO RUN A MINECRAFT SERVER, YOU ARE DOING IT WRONG. QUIT ASKING HOW TO RUN THIS ON WINDOWS. INSTRUCTIONS SHOULD BE VERY SIMILAR, BUT NO GUARANTEES THAT THIS WILL WORK.**
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)

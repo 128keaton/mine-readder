@@ -16,6 +16,11 @@
 * Make sure there are no other lines of `***` anywhere else in the sidebar or things will get really messed up
 * Save the wiki page
 * Edit app.py to include yours subreddit name (without the /r/) and your bot's username and password.
+* 
+**To-Do**
+* Make it easier to configure stuff.
+* Make python query faster.
+
 
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
